@@ -8,6 +8,14 @@
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script type="text/javascript" src="html2canvas-master/dist/html2canvas.js"></script>
+	
+	<script type='text/javascript'>
+    function screenshot(){
+   		html2canvas(document.body).then(function(canvas) {
+    	document.body.appendChild(canvas);
+   		});
+  	}
+  	</script>
                 
     <body style='margin : 0px; overflow: hidden;'>
 	<input type="button" value='Take Screenshot' onclick='screenshot();' style="position: absolute;z-index:1000;left:10px;bottom:10px;"></br>
@@ -26,27 +34,4 @@
         </a-scene>
 
     </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type='text/javascript'>
-     function screenshot(){
-        html2canvas(document.body,{background: '#fff'}).then(function(canvas) {
-
-         document.body.appendChild(canvas);
-
-         // Get base64URL
-         var base64URL = canvas.toDataURL('image/jpeg').replace('image/jpeg', 'image/octet-stream');
-
-         // AJAX request
-         $.ajax({
-            url: 'ajaxfile.php',
-            type: 'post',
-            data: {image: base64URL},
-            success: function(data){
-               console.log('Upload successfully');
-            }
-         });
-       });  
-     }
-     </script>
 </html>
