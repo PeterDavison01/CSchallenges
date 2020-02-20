@@ -9,7 +9,8 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
                 
     <body style='margin : 0px; overflow: hidden;'>
-	<button type="button" style="position: absolute;z-index:1000;left:10px;bottom:10px;">Test</button>
+	<button type="button" onclick="alert('Screenshot taken')" style="position: absolute;z-index:1000;left:10px;bottom:10px;">Take Screenshot</button>
+	    
         <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; z-index:900;">
 
         <a-assets>
