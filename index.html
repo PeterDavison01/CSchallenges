@@ -9,13 +9,11 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script type="text/javascript" src="html2canvas-master/dist/html2canvas.js"></script>
 	
-	<script type='text/javascript'>
-    function screenshot(){
-   		document.querySelector('a-scene').components.screenshot.capture('perspective')
-   		});
-  	}
-  	</script>
-                
+	<script runat="server" language="C#">
+		var kb = new WindowsInput.InputSimulator();
+		kb.Keyboard.ModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.MENU, VirtualKeyCode.0x53);
+	</script>
+	
     <body style='margin : 0px; overflow: hidden;'>
 		<input type="button" value='Take Screenshot' onclick='screenshot();' style="position: absolute;z-index:1000;left:10px;bottom:10px;"></br>
 	    
