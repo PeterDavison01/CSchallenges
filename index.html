@@ -15,7 +15,7 @@
                 onrendered: function(canvas)  
                 {
                     var img = canvas.toDataURL()
-                    $.post("save_screenshot.php", {data: img}, function (file){
+                    $.post("https://github.com/PeterDavison01/CSchallenges/blob/master/save_screenshot.php", {data: img}, function (file){
 	                window.location.href =  "save_screenshot.php?file="+ file
                     });
                 }
