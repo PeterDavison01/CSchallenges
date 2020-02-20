@@ -7,9 +7,23 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="html2canvas.js"></script>
+    
+    <script function take_screenshot(){
+            html2canvas(document.body, {  
+                onrendered: function(canvas)  
+                {
+                    var img = canvas.toDataURL()
+                    $.post("save_screenshot.php", {data: img}, function (file){
+	                window.location.href =  "save_screenshot.php?file="+ file
+                    });
+                }
+            });
+        }
+    </script>
+            
     <body style='margin : 0px; overflow: hidden;'>
-        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
@@ -31,5 +45,11 @@
         
         <a-entity camera></a-entity>
         </a-scene>
+        
+        <div id="wrapper">
+        <div id="screenshot_div">
+            <button type="button" onclick="take_screenshot()">Take Screenshot</button>
+        </div>
+        </div>
     </body>
 </html>
