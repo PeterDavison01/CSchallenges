@@ -7,37 +7,21 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="html2canvas.js"></script>
                 
     <body style='margin : 0px; overflow: hidden;'>
-	    <button type="button" style="position: absolute;z-index:1000;left:10px;bottom:10px;">Test</button>
-        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+	<button type="button" style="position: absolute;z-index:1000;left:10px;bottom:10px;">Test</button>
+        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; z-index:900;">
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
             <a-asset-item id="box" src="https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Objects/box.gltf"></a-asset-item>
         </a-assets>
             
         <a-marker preset='hiro'>
             <a-box position='0 0.5 0' color="red"></a-box>
         </a-marker>
-
-        <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-entity
-                animation-mixer
-                gltf-model="#animated-asset"
-                scale="2 2 2">
-            </a-entity>
-        </a-marker>
         
         <a-entity camera></a-entity>
         </a-scene>
-        
-        <div id="wrapper">
-        <div id="screenshot_div">
-            <button type="button" onclick="take_screenshot()">Take Screenshot</button>
-        </div>
-        </div>
+
     </body>
 </html>
