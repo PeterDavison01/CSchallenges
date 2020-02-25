@@ -18,6 +18,11 @@
     <body style='margin : 0px; overflow: hidden;'>
 		<asp:button text="Take Screenshot" OnClick="takeScreenshot" runat="server" style="position: absolute;z-index:1000;left:10px;bottom:10px;></asp:button>
         <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; z-index:900;">
+	
+	<a-marker-camera type='pattern' patternUrl='https://github.com/PeterDavison01/CSchallenges/blob/master/Markers/pattern-Focals_Desktop_Resized_02S_Lights.patt'></a-marker-camera>
+	
+	<a-marker type='pattern' patternUrl='https://github.com/PeterDavison01/CSchallenges/blob/master/Markers/pattern-Focals_Desktop_Resized_02S_Lights.patt'></a-marker>
+	
 
         <a-assets>
             <a-asset-item id="box" src="https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Objects/box.gltf"></a-asset-item>
