@@ -6,7 +6,6 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script type="text/javascript" src="html2canvas-master/dist/html2canvas.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; z-index:900;">
@@ -15,7 +14,7 @@
             <a-asset-item id="box" src="https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Objects/box.gltf"></a-asset-item>
         </a-assets>
             
-        <a-marker-camera preset='custom' type='pattern' patternUrl='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-6_marker.patt'>
+        <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-6_marker.patt'>
 		    <a-box position='0 0.5 0' color="grey"></a-box>
 	</a-marker-camera>
             
