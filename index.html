@@ -8,14 +8,10 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
             
         <a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-6_marker.patt'>
 		    <a-box position='0 0.5 0' color="grey"></a-box>
-	</a-marker>
-		
-	<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-07-marker.patt'>
-		    <a-box position='0 0.5 0' color="blue"></a-box>
 	</a-marker>
             
 	<a-entity camera></a-entity>
