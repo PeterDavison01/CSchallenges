@@ -12,28 +12,26 @@
 
     <body style='margin : 0px; overflow: hidden;'>
 	    <!-- Create AR scene for 3D objects -->
-        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
             <!-- Create method to recognises a barcode marker, symbolsing a 6 -->
-            <a-marker-camera type='barcode' value='6'></a-marker-camera>
             <a-marker type='barcode' value='6'>
 			<!-- Create a grey 3D box on the marker -->
 		            <a-box position='0 0.5 0' color="grey"></a-box>
 	          </a-marker>
 	    <!-- Create method to recognise a barcode marker, symbolising a 7 -->
-            <a-marker-camera type='barcode' value='7'></a-marker-camera>
 	          <a-marker type='barcode' value='7'>
 			<!-- Create a red 3D box on the marker -->
 		            <a-box position='0 0.5 0' color="red"></a-box>
 	          </a-marker>
 
-            <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-QLab1.patt'></a-marker-camera>
+            <!--<a-marker-camera type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-QLab1.patt'></a-marker-camera>-->
 
-            <a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-QLab1.patt'>
+            <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/PeterDavison01/CSchallenges/master/Markers/pattern-QLab1.patt'>
                 <a-box position='0 0.5 0' color="blue"></a-box>
-            </a-marker>
+            </a-marker-camera>
 
             <!--Create camera entity in 3D space to display AR scene -->
-	           <!--<a-entity camera></a-entity>-->
+	           <a-entity camera></a-entity>
 
         </a-scene>
     </body>
