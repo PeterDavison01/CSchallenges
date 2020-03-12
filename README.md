@@ -6,5 +6,13 @@ The main aim of this project is to aid future developers working on Augmented Re
 
 This project will utilise the tools provided by [AR.js](https://github.com/jeromeetienne/AR.js) for the Augmented Reality side and [Flask](https://github.com/pallets/flask) for the web framework on the Raspberry Pi. AR.js uses Marker-based Augmented Reality, which means if a camera detects a recognised marker then the device will produce the corresponding AR model ontop of the marker for the user to see. 
 
+### Guide to the GitHub Repository
+
+This section is for developers who want to use this repository for their own development.
+##### Objects Folder
+This folder is for custom objects, so models and animations will be stored in here. Although currently the application uses default squares, the ability to add custom objects will shortly be added.
+##### Index.html
+Index.html is the main program that the application runs off. It is written in HTML and fully commented for ease of modification. 
+
 ### Web Application
 The AR standalone version can be found [here](https://peterdavison01.github.io/CSchallenges/). This demonstrates a simple AR marker-based app that produces different coloured squares. This application is mainly used for testing which explains it's limited capabilities. 
