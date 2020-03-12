@@ -9,9 +9,9 @@ This project will utilise the tools provided by [AR.js](https://github.com/jerom
 ### Guide to the GitHub Repository
 
 This section is for developers who want to use this repository for their own development.
-##### Objects Folder
+#### Objects Folder
 This folder is for custom objects, so models and animations will be stored in here. Although currently the application uses default squares, the ability to add custom objects will shortly be added.
-##### Index.html
+#### Index.html
 Index.html is the main program that the application runs off. It is written in HTML and fully commented for ease of modification. 
 
 ### Web Application
