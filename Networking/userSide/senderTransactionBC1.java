@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileExample1 {
+public class senderTransactionBC1 {
 
     public static void main(String[] args) {
 
