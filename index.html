@@ -8,37 +8,26 @@
 	<!-- Import A-frame V1.0.4 -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 	<!-- Import modified version of AR.js -->
-    <script src="https://raw.githack.com/PeterDavison01/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
 	    <!-- Create AR scene for 3D objects -->
        	<a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
             <!-- Create method to recognises a barcode marker, symbolsing a 6 -->
-            <a-marker type='barcode' value='6'>
+            <a-marker type='barcode' value='1'>
 			<!-- Create a grey 3D box on the marker -->
-	         	<a-box position='0 0.5 0' color="grey"></a-box>
+	         	<a-box position='0 0.5 0' color="green"></a-box>
 	        </a-marker>
+		
 	    	<!-- Create method to recognise a barcode marker, symbolising a 7 -->
-	        <a-marker type='barcode' value='7'>
-
+	        <a-marker type='barcode' value='2'>
 			<!-- Create a red 3D box on the marker -->
 		    	<a-box position='0 0.5 0' color="red"></a-box>
 	        </a-marker>
+		
+		<a-marker type='barcode' value='3'>
+			<a-box position=' 0 0.5 0' color="blue"></a-box.
 			
-		<a-marker-camera preset='custom' type='pattern' url='Markers/pattern-QLab1-MK3.patt'></a-marker-camera>
-		
-		<a-marker-camera preset='custom' type='pattern' url='Markers/pattern-QLab1-MK3.patt'>
-                	<a-box position='0 0.5 0' color="blue"></a-box>
-            	</a-marker-camera>-->
-		
-			<!--<a-marker type="pattern" url="https://raw.githack.com/PeterDavison01/CSchallenges/master/Markers/pattern-QLab1-MK2(1).patt">
-				<a-box position='0 0.5 0' color="blue"></a-box>
-			</a-marker>
-		
-		<a-marker type="pattern" url="https://cdn.glitch.com/418c9d09-ea8f-42a9-a6b8-65fe2a5baa88%2Fpattern-marker%20(3).patt?1528056640776">
-				<a-box position='0 0.5 0' color="blue"></a-box>
-			</a-marker>
--->
             <!--Create camera entity in 3D space to display AR scene -->
 	        <a-entity camera></a-entity>
 
