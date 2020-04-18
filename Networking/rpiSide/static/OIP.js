@@ -2,6 +2,7 @@ var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Te
 var testName = "Cupboard";
 var testMarkerNum = 1;
 var obj = new ObjectConstructor(testName, testMarkerNum, testObjCharacs);
+var numOfObjs;
 
 function rtnObjCharacs(){
 	var rtn = "\n\n";
