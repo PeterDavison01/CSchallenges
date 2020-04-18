@@ -20,7 +20,7 @@
 			<label for="name"><b>Name</b></label>
 			<input id="createName" type="text" placeholder="Enter Name" name="name" required>
 			<button type="submit" class="btn" onclick="createNewObject()">Save</button>
-			<script>for (testObj of allObjs){console.log(testObj)}</script>
+			<script>for (testObj of allObjs){console.log(testObj); console.log(allLogs.length)}</script>
 			<button type="button" class"btn cancel" onclick="closeCreateObjForm()">Close</button>
 		</form>
 	</body>
