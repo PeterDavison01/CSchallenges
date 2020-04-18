@@ -10,13 +10,13 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 
 var i;
-for (i = 1; i < 11; i++){
+for (i = 0; i < 10; i++){
 	var cookieName = "Object" + i;
 	//try{
 	var savedObjJsonString = getCookie(cookieName);
 	if (savedObjJsonString.length > 0){
 		var savedObj = JSON.parse(savedObjJsonString);
-		allObjs.push(savedObj);
+		allObjs[i] = savedObj;
 	}
 }
 
