@@ -21,13 +21,14 @@ function rtnObjCharacs(obj){
 
 function returnObjInfo(objID){
 	var rtn = "Error loading Object.";
-	for (obj in allObjs){
-		console.log(obj);
-		if (obj.markerNum == objID){
-			rtn = obj.name.toUpperCase() +
-			"\n" + "Marker Number: " + obj.markerNum +
+	var i;
+	for (i = 0; i < numOfObjs; i++){
+		console.log(allObjs[i]);
+		if (allObjs[i].markerNum == objID){
+			rtn = allObj[i].name.toUpperCase() +
+			"\n" + "Marker Number: " + allObj[i].markerNum +
 			"\n" + "Object Characteristics: " +
-			rtnObjCharacs(obj);
+			rtnObjCharacs(allObj[i]);
 		}
 	}
 	return rtn;
