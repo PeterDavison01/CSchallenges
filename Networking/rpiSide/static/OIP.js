@@ -23,7 +23,7 @@ function returnObjInfo(objID){
 	for (obj in allObjs){
 		var rtn = "Error loading Object.";
 		if (obj.markerNum == objID){
-			rtn = obj.name.toUpperCase() +
+			rtn = "Cupboards" +
 			"\n" + "Marker Number: " + obj.markerNum +
 			"\n" + "Object Characteristics: " +
 			rtnObjCharacs(obj);
