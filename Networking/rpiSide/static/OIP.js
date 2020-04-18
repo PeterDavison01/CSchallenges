@@ -1,7 +1,7 @@
 var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Test1", "test2", "Test3"];
 var testName = "Cupboard";
 var testMarkerNum = 1;
-debugCreateNewObj(testname, testMarkerNum, testObjCharacs);
+debugCreateNewObject(testname, testMarkerNum, testObjCharacs);
 var numOfObjs = allObjs.length;
 
 function rtnObjCharacs(obj){
