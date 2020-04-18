@@ -1,3 +1,7 @@
+function debugCreateNewObject(name, markerNum, objCharacs){
+	var testObj = new ObjectConstructor(name, markerNum, objCharacs);	
+}
+
 function createNewObject() {
 	var name = document.getElementById("createName");
 	var markerNum = allObjs.length + 1;
