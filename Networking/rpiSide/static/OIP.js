@@ -36,5 +36,5 @@ function openCreateObjForm() {
 }
 
 function closeCreateObjForm() {
-  window.location.href = "";
+  window.location.href = "main";
 }
