@@ -4,7 +4,7 @@ var testMarkerNum = 1;
 var obj = new ObjectConstructor(testName, testMarkerNum, testObjCharacs);
 var numOfObjs = allObjs.length;
 
-function rtnObjCharacs(){
+function rtnObjCharacs(obj){
 	var rtn = "\n\n";
 	if (obj.objCharacs.length == 0){
 		rtn += "There are currently no object characteristics.";
@@ -26,7 +26,7 @@ function returnObjInfo(objID){
 			rtn = obj.name.toUpperCase() +
 			"\n" + "Marker Number: " + obj.markerNum +
 			"\n" + "Object Characteristics: " +
-			rtnObjCharacs();
+			rtnObjCharacs(obj);
 		}
 	}
 	return rtn;
