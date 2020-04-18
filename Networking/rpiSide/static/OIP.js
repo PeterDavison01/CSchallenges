@@ -21,7 +21,7 @@ function rtnObjCharacs(){
 
 function returnObjInfo(objID){
 	for (obj in allObjs){
-		var rtn = "";
+		var rtn;
 		if (obj.markerNum == objID){
 			rtn = obj.name.toUpperCase() +
 			"\n" + "Marker Number: " + obj.markerNum +
