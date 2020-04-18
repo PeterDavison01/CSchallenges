@@ -4,7 +4,7 @@ import time
 
 app = Flask(__name__)
 
-@app.route("/" || "/main")
+@app.route("/" or "/main")
 def main():
 	return render_template('index.html')
 
