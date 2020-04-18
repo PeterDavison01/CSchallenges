@@ -9,7 +9,7 @@ def main():
 	return render_template('index.html')
 
 @app.route("/")
-def backToMain:
+def backToMain():
 	@app.route("/")
 
 @app.route("/createNewObject")
