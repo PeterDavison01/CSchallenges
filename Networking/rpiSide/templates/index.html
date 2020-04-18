@@ -15,9 +15,9 @@
 	<script src="{{url_for('static', filename='OIP.js')}}"></script>
 		
 	<body style='margin : 0px; overflow: hidden;'>
-		<canvas style="touch-action: none' user-select: none; -webkit-user-drag: none;"></canvas>
+		<canvas style="touch-action: none' user-select: none; -webkit-user-drag: none;"></canvas>-->
 	    <!-- Create AR scene for 3D objects -->
-		<div class="dropdown">
+		<<div class="dropdown">
 			<button onClick="showMenu()" class="menubtn">Menu</button>
 			<div id="menu" class="dropdown-content">
 				<a href="#createNewObject">Store new Object details</a>
@@ -43,15 +43,15 @@
 			}
 		</script>
 		
-		<a-scene stats embedded vr-mode-ui="enabled: false" arjs">
-			
+		<a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+		
 			<!-- Create method to recognises a barcode marker, symbolsing a 1 -->
 			<a-marker type='barcode' value='1'>
 			<!-- Create a plane next to the marker -->
 <!--				<a-plane rotation="-90 0 0" position="2 0 0" color="grey" width="2"></a-plane>-->
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
-					material="color: blue"
-					id="OIP"
+					material="color: blue" 
+					id="OIP" 
 					rotation="-90 0 0"
 				>
 				</a-entity>
