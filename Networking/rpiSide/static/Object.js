@@ -10,7 +10,7 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 
 
-var savedObjJsonString = getCookie("allObjsCookie);
+var savedObjJsonString = getCookie("allObjsCookie");
 var savedAllObjs = JSON.parse(savedObjJsonString);
 var i;
 for (i = 0; i < 10; i++){
