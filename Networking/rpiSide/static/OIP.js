@@ -28,8 +28,8 @@ function returnObjInfo(objID){
 			"\n" + "Object Characteristics: " +
 			rtnObjCharacs();
 		}
-		return rtn;
 	}
+	return rtn;
 }
 
 function showMenu(){
