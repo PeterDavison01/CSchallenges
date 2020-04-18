@@ -10,7 +10,7 @@ allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 9, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 //var savedAllObjsStr = JSON.stringify(allObjs);
-console.log(savedAllObjsStr);
+//console.log(savedAllObjsStr);
 sessionStorage.setItem("savedAllObjs", JSON.stringify(allObjs));
 
 var i;
