@@ -24,24 +24,6 @@
 				<a href="#changeObjectDetails">Change existing Object details</a>
 			</div>
 		</div>
-		<script>
-			function showMenu(){
-				document.getElementById("menu").classList.toggle("show");
-			}
-
-			window.onclick = function(event) {
-				if (!event.target.matches('.menubtn')) {
-					var dropdowns = document.getElementsByClassName("dropdown-content");
-					var i;
-					for (i = 0; i < dropdowns.length; i++) {
-						var openDropdown = dropdowns[i];
-						if (openDropdown.classList.contains('show')) {
-							openDropdown.classList.remove('show');
-						}
-					}
-				}
-			}
-		</script>
 		
 		<a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 		
