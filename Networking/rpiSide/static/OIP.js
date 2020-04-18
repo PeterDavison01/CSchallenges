@@ -2,7 +2,8 @@ var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Te
 var testName = "Cupboard";
 var testMarkerNum = 1;
 var obj = new ObjectConstructor(testName, testMarkerNum, testObjCharacs);
-var numOfObjs;
+var allObjs[];
+var numOfObjs = allObjs.length;
 
 function rtnObjCharacs(){
 	var rtn = "\n\n";
@@ -19,7 +20,9 @@ function rtnObjCharacs(){
 	return rtn;
 }
 
-function returnObjInfo(){
+function returnObjInfo(markerId){
+	for
+	
 	var rtn = "";
 	rtn = obj.name.toUpperCase() +
 	"\n" + "Marker Number: " + obj.markerNum +
