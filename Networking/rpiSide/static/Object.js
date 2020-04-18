@@ -9,12 +9,11 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 9, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 
-
-var savedObjJsonString = getCookie("allObjsCookie");
-var savedAllObjs = JSON.parse(savedObjJsonString);
 var i;
-for (i = 0; i < 10; i++){
-	allObjs[i] = savedAllObjs[i];
+var savedStorageName;
+for (i=0; i < 10; i++){
+	savedStorageName = "Object"+(i+1);
+	allObjs[i] = sessionStorage.getItem[savedStorageName];
 }
 
 var object = {
@@ -61,6 +60,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	var allObjJsonString = JSON.stringify(allObjs);
-	setCookie("allObjsCookie", allObjJsonString, 7);
+	var storageName = "Object" + this.markerNum;
+	sessionStorage.setItem(storageNum, this);
 }
