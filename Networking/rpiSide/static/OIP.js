@@ -32,9 +32,9 @@ function showMenu(){
 }
 
 function openCreateObjForm() {
-  window.location.href = "templates/createNewObject.html";
+  window.location.href = "createNewObject.html";
 }
 
 function closeCreateObjForm() {
-  window.location.href = "templates/index.html";
+  window.location.href = "index.html";
 }
