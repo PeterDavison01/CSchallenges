@@ -1,4 +1,5 @@
 function createNewObject() {//, ArrayList<String ) {
 	var name = document.getElementById("createName");
-	var obj = new ObjectConstructor(name, allObjs.length, []);
+	var markerNum = allObjs.length + 1;
+	var obj = new ObjectConstructor(name, markerNum, []);
 }
