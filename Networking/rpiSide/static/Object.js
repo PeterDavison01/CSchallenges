@@ -1,4 +1,4 @@
-var totalObjs = [];
+var allObjs = [];
 
 var object = {
 	name: "Unknown",
