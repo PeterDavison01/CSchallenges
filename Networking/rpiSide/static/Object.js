@@ -1,4 +1,15 @@
 var allObjs = [""];
+var i;
+for (i = 1; i < 11; i++){
+	var cookieName = "Object" + i;
+	//try{
+	var savedObjJsonString = getCookie(cookieName);
+	if (savedObjJsonString.length > 0){
+		var savedObj = JSON.parse(savedUserJsonString);
+		allObjs.push(savedObj);
+	}
+}
+
 
 var object = {
 	name: "Unknown",
@@ -14,7 +25,6 @@ var object = {
 	},
 
 	get objCharacs(){
-		var i;
 		var rtn = "";
 		if (objCharacs.length = 0) {
 			rtn = "There are currently no object characteristics.";
@@ -51,6 +61,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 		allObjs.push(this);
 	}
 	var userJsonString = JSON.stringify(this);
-	var cookieName = "Object" + this.markerNum;
-	setCookie(cookieName, userJsonString, 7);
+	cookieName = "Object" + this.markerNum;
+	setCookie(cookieName, objJsonString, 7);
 }
