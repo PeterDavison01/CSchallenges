@@ -44,5 +44,9 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
+	console.log(this);
 	allObjs.push(this);
+	for (testObj in allObjs){
+		console.log(testObj);
+	}
 }
