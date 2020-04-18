@@ -16,6 +16,7 @@
   display: inline-block;
   top: 0px;
   right: 11em;
+  z-index: 1;
 }
 
 .dropdown-content {
