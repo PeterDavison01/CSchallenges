@@ -51,7 +51,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	else{
 		allObjs.push(this);
 	}
-	for (testObj in allObjs){
+	for (testObj of allObjs){
 		console.log(testObj);
 	}
 }
