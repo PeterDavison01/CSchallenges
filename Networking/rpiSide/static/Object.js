@@ -5,7 +5,7 @@ for (i = 1; i < 11; i++){
 	//try{
 	var savedObjJsonString = getCookie(cookieName);
 	if (savedObjJsonString.length > 0){
-		var savedObj = JSON.parse(savedUserJsonString);
+		var savedObj = JSON.parse(savedObjJsonString);
 		allObjs.push(savedObj);
 	}
 }
