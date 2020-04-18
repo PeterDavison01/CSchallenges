@@ -8,6 +8,7 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 8, objCharacs: []},
 	      {name: "", markerNum: 9, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
+console.logs(allObjs);
 var savedAllObjsStr = JSON.stringify(allObjs);
 localStorage.setItem("savedAllObjs", savedAllObjsStr);
 
