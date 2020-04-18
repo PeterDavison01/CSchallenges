@@ -70,6 +70,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	savedAllObjsStr = JSON.stringify(allObjs);
-	sessionStorage.setItem("savedAllObjs", savedAllObjs);
+	//savedAllObjsStr = JSON.stringify(allObjs);
+	//sessionStorage.setItem("savedAllObjs", savedAllObjs);
 }
