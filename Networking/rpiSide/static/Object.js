@@ -44,7 +44,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
-	console.log(this);
+	console.log(allObjs.length);
 	if (allObjs[0] == ""){
 		allObjs[0] = (this);
 	}
