@@ -2,7 +2,6 @@ var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Te
 var testName = "Cupboard";
 var testMarkerNum = 1;
 debugCreateNewObject(testName, testMarkerNum, testObjCharacs);
-var numOfObjs = allObjs.length;
 
 function rtnObjCharacs(obj){
 	var rtn = "\n\n";
@@ -20,15 +19,9 @@ function rtnObjCharacs(obj){
 }
 
 function returnObjInfo(objID){
-	console.log("entered func");
-	console.log(numOfObjs);
 	var rtn = "Error loading Object.";
-	var i;
 	for (obj of allObjs){
-		//console.log(allObjs[i]);
-		console.log("waiting");
 		if (obj.markerNum == objID){
-			console.log("That's ok");
 			rtn = obj.name.toUpperCase() +
 			"\n" + "Marker Number: " + obj.markerNum +
 			"\n" + "Object Characteristics: " +
