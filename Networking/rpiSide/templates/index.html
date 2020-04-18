@@ -37,22 +37,208 @@
 				>
 				</a-entity>
 				<script>
-					var objInfo = "anchor: center; align: center; width:2; value: " + returnObjInfo();
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() = 0){
+						objInfo = template + "There are no objects available.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
 					var OIP = document.querySelector('#OIP');
 					OIP.setAttribute('text', objInfo);
 				</script>
 	        	</a-marker>
-		
-		    	<!-- Create method to recognise a barcode marker, symbolising a 2 -->
-		        <a-marker type='barcode' value='2'>
-				<!-- Create a red 3D box on the marker -->
-		    		<a-box position='0 0.5 0' color="red"></a-box>
-		        </a-marker>
 	
-			<a-marker type='barcode' value='3'>
-				<a-box position=' 0 0.5 0' color="blue"></a-box>
+			<a-marker type='barcode' value='2'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 2){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
 			</a-marker>
-				
+			
+			<a-marker type='barcode' value='3>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 3){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='4'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 4){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='5'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 5){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='6'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 6){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='7'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 7){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='8'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 8){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='9'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 9){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+			
+			<a-marker type='barcode' value='10'>
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue" 
+					id="OIP" 
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var template = "anchor: center; align: center; width:2; value: ";
+					var objInfo = "";
+					if (numOfObjs() < 10){
+						objInfo = template + "No Object assigned to this marker.";
+					}
+					else{
+						objInfo = template + returnObjInfo();
+					}
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+			</a-marker>
+
 	            	<!--Create camera entity in 3D space to display AR scene -->
 		        <a-entity camera></a-entity>
 			<a-text value="Scan a Marker to start!" position="1 0 0"></a-text>
