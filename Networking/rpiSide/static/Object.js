@@ -18,7 +18,10 @@ for (i=0; i < 10; i++){
 var savedStorageName;
 for (i=0; i < 10; i++){
 	savedStorageName = "Object"+(i+1);
-	allObjs[i] = sessionStorage.getItem[savedStorageName];
+	var savedStorageObj = sessionStorage.getItem[savedStorageName];
+	if (savedStorageObj != null){
+		allObjs[i] = savedStorageObj
+	}
 }
 
 var object = {
