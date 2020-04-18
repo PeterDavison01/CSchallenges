@@ -1,4 +1,4 @@
-var allObjs = [""];
+var allObjs = [];
 
 var object = {
 	name: "Unknown",
