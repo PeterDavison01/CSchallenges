@@ -50,4 +50,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	else{
 		allObjs.push(this);
 	}
+	var userJsonString = JSON.stringify(this);
+	var cookieName = "Object" + this.markerNum;
+	setCookie(cookieName, userJsonString, 7);
 }
