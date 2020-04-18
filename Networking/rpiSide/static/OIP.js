@@ -45,9 +45,9 @@ window.onclick = function(event) {
 }
 
 function openCreateObjForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("createObj").style.display = "block";
 }
 
 function closeCreateObjForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("createObj").style.display = "none";
 }
