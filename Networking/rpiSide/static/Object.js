@@ -8,10 +8,10 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 8, objCharacs: []},
 	      {name: "", markerNum: 9, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
-sessionStorage.setItem("savedAllObjs", allObjs);
+localStorage.setItem("savedAllObjs", allObjs);
 
 var i;
-var loadedAllObjs = sessionStorage.getItem["savedAllObjs"];
+var loadedAllObjs = localStorage.getItem["savedAllObjs"];
 console.log(loadedAllObjs);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
@@ -64,5 +64,5 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	sessionStorage.setItem("savedAllObjs", allObjs);
+	localStorage.setItem("savedAllObjs", allObjs);
 }
