@@ -54,12 +54,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
-	if (allObjs[0] == ""){
-		allObjs[0] = (this);
-	}
-	else{
-		allObjs.push(this);
-	}
+	allObjs[consMarkerNum] = this;
 	var objJsonString = JSON.stringify(this);
 	cookieName = "Object" + this.markerNum;
 	setCookie(cookieName, objJsonString, 7);
