@@ -15,12 +15,11 @@ for (i=0; i < 10; i++){
 	sessionStorage.setItem(storageName, allObjs[i]);
 }
 
-var savedStorageName;
+var loadedAllObjs = sessionStorage.getItem["savedAllObjs"];
 for (i=0; i < 10; i++){
-	savedStorageName = "Object"+(i+1);
-	var savedStorageObj = sessionStorage.getItem[savedStorageName];
-	if (savedStorageObj != null){
-		allObjs[i] = savedStorageObj
+	var loadedStorageObj = loadedAllObjs[i];
+	if (loadedStorageObj != null){
+		allObjs[i] = loadedStorageObj;
 	}
 }
 
@@ -68,6 +67,5 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	var storageName = "Object" + this.markerNum;
-	sessionStorage.setItem(storageName, this);
+	sessionStorage.setItem("savedAllObjs", allObjs);
 }
