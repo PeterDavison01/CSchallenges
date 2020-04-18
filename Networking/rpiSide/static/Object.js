@@ -16,9 +16,7 @@ for (i=0; i < 10; i++){
 }
 
 var loadedAllObjs = sessionStorage.getItem["savedAllObjs"];
-for(loadedObj of loadedAllObjs){
-	console.log(loadedObj);
-}
+console.log(loadedAllObjs);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
 	if (loadedStorageObj != null){
