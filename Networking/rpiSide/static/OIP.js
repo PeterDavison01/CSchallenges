@@ -20,10 +20,11 @@ function rtnObjCharacs(obj){
 }
 
 function returnObjInfo(objID){
+	console.log("entered func");
 	var rtn = "Error loading Object.";
 	var i;
 	for (i = 0; i < numOfObjs; i++){
-		console.log(allObjs[i]);
+		//console.log(allObjs[i]);
 		console.log("waiting");
 		if (allObjs[i].markerNum == objID){
 			console.log("That's ok");
