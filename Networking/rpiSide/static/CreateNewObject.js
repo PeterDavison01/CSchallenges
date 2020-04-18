@@ -1,6 +1,6 @@
 function debugCreateNewObject(name, markerNum, objCharacs){
 	var testObj = new ObjectConstructor(name, markerNum, objCharacs);	
-)
+}
 	
 function createNewObject() {//, ArrayList<String ) {
 	var name = document.getElementById("createName");
