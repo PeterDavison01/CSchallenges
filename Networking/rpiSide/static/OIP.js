@@ -29,7 +29,7 @@ function returnObjInfo(objID){
 			"\n" + "Object Characteristics: " +
 			rtnObjCharacs();
 		}
-		rteturn rtn;
+		return rtn;
 	}
 }
 
