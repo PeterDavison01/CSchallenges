@@ -6,7 +6,7 @@ function createNewObject() {
 	var creatorName = document.getElementById("createName");
 	var creatorMarkerNum;
 	for (existingObj of allObjs){
-		if (existingObj.name.length == 0){
+		if (existingObj.name == ""){
 			creatorMarkerNum = existingObj.markerNum;
 			break;
 		}
