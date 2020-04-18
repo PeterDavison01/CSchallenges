@@ -10,6 +10,12 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 localStorage.setItem("savedAllObjs", allObjs);
 
+if (typeof(Storage) !== "undefined"){
+	console.log("Yerp");
+else{
+	console.log("FUCK");
+}
+
 var i;
 var loadedAllObjs = localStorage.getItem["savedAllObjs"];
 console.log(localStorage.getItem["savedAllObjs"]);
