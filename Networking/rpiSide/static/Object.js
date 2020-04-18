@@ -1,4 +1,4 @@
-var allObjs = [];
+var allObjs = [""];
 
 var object = {
 	name: "Unknown",
@@ -45,7 +45,11 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	console.log(this);
-	allObjs.push(this);
+	if (allObjs[0] == ""){
+		allObjs[0] = (this);
+	else{
+		allObjs.push(this);
+	}
 	for (testObj in allObjs){
 		console.log(testObj);
 	}
