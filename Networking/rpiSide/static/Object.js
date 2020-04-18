@@ -12,6 +12,7 @@ localStorage.setItem("savedAllObjs", allObjs);
 
 if (typeof(Storage) !== "undefined"){
 	console.log("Yerp");
+}
 else{
 	console.log("FUCK");
 }
