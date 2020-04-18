@@ -24,7 +24,9 @@ function returnObjInfo(objID){
 	var i;
 	for (i = 0; i < numOfObjs; i++){
 		console.log(allObjs[i]);
+		console.log("waiting");
 		if (allObjs[i].markerNum == objID){
+			console.log("That's ok");
 			rtn = allObj[i].name.toUpperCase() +
 			"\n" + "Marker Number: " + allObj[i].markerNum +
 			"\n" + "Object Characteristics: " +
