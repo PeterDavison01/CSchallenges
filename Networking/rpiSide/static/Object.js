@@ -8,18 +8,14 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 8, objCharacs: []},
 	      {name: "", markerNum: 9, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
+var savedAllObjsStr = allObjs.stringify();
 localStorage.setItem("savedAllObjs", allObjs);
-
-if (typeof(Storage) !== "undefined"){
-	console.log("Yerp");
-}
-else{
-	console.log("FUCK");
-}
 
 var i;
 var loadedAllObjs = localStorage.getItem["savedAllObjs"];
 console.log(localStorage.getItem["savedAllObjs"]);
+loadedAllObjs = loadedAllObjs.parse();
+console.log(loadedAllLogs);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
 	if (loadedStorageObj != null){
@@ -71,5 +67,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	localStorage.setItem("savedAllObjs", allObjs);
+	savedAllObjsStr = allObjs.stringify();
+	localStorage.setItem("savedAllObjs", savedAllObjs);
 }
