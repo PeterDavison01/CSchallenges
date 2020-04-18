@@ -5,11 +5,20 @@
                 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="static/main.css" media="screen"/>
         </head>
-         
-<form action="#" method="post" class="create-form-container">
-        <h1>Store new Object details</h1>
-        <label for="name"><b>Name</b></label>
-        <input type="text placeholder="Enter Name" name="name" required>
-        <button type="submit" class="btn">Save</button>
-        <button type="button" class"btn cancel" onclick="closeCreateObjForm()">Close</button>
-</form>
+	<!-- Import A-frame V1.0.4 -->
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<!-- Import AR.js -->
+	<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+	<script src="{{url_for('static', filename='Object.js')}}"></script>
+	<script src="{{url_for('static', filename='OIP.js')}}"></script>
+        <body style='margin : 0px; overflow: hidden;'>
+		<form action="#" method="post" class="create-form-container">
+			<h1>Store new Object details</h1>
+			<label for="name"><b>Name</b></label>
+			<input type="text placeholder="Enter Name" name="name" required>
+			<button type="submit" class="btn">Save</button>
+			<button type="button" class"btn cancel" onclick="closeCreateObjForm()">Close</button>
+		</form>
+	</body>
+</html>
+											      
