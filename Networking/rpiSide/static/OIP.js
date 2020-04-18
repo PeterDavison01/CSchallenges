@@ -44,4 +44,10 @@ window.onclick = function(event) {
 	}
 }
 
+function openCreateObjForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeCreateObjForm() {
+  document.getElementById("myForm").style.display = "none";
+}
