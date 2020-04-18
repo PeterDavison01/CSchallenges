@@ -47,6 +47,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	console.log(this);
 	if (allObjs[0] == ""){
 		allObjs[0] = (this);
+	}
 	else{
 		allObjs.push(this);
 	}
