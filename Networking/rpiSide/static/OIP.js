@@ -1,9 +1,51 @@
-var objCharacs = [];
-objCharacs.add("Has 15 Pens");
-objCharacs.add("Has 6 Pads of Paper");
-var obj = new ObjectConstructor("Cupboard", 1, objCharacs);
-console.log(obj.getName());
-console.log(obj.getMarkerNum());
-for (String objCharac : obj.objCharacs) {
-	console.log(objCharac);
+var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Test1", "test2", "Test3"];
+var testName = "Cupboard";
+var testMarkerNum = 1;
+var obj = new ObjectConstructor(testName, testMarkerNum, testObjCharacs);
+
+function rtnObjCharacs(){
+	var rtn = "\n\n";
+	if (obj.objCharacs.length == 0){
+		rtn += "There are currently no object characteristics.";
+	}
+	else{
+		var i = 0;
+		for (var objCharac in obj.objCharacs){
+			rtn += obj.objCharacs[i] + "\n";
+			i++;
+		}
+	}
+	return rtn;
 }
+
+function returnObjInfo(){
+	var rtn = "";
+	rtn = obj.name.toUpperCase() +
+	"\n" + "Marker Number: " + obj.markerNum +
+	"\n" + "Object Characteristics: " +
+	rtnObjCharacs();
+	return rtn;
+}
+
+function showMenu(){
+	document.getElementById("menu").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+	if (!event.target.matches('.menubtn')) {
+		var dropdowns = document.getElementsByClassName("menu-dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
+}
+
+
+function createNewObjectUI(){
+
+}
+

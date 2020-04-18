@@ -1,41 +1,70 @@
 <!doctype html>
 <html>
-    <head>
-	<!-- Create a viewport to allow the user to see the content, make it the width of their device and unscalable
-	so the display doesn't distort -->
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
+	<head>
+		<title>Customisable Augmented Reality Grapical User Interface</title>
+		<!-- Create a viewport to allow the user to see the content, make it the width of their device and unscalable
+		so the display doesn't distort -->
+        	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			
+		</style>
+	</head>
 	<!-- Import A-frame V1.0.4 -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-	<!-- Import modified version of AR.js -->
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-
-    <body style='margin : 0px; overflow: hidden;'>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<!-- Import AR.js -->
+	<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+	<script src="{{url_for('static', filename='Object.js')}}"></script>
+	<script src="{{url_for('static', filename='OIP.js')}}"></script>
+		
+	<body style='margin : 0px; overflow: hidden;'>
+		<canvas style="touch-action: none' user-select: none; -webkit-user-drag: none;"></canvas>
 	    <!-- Create AR scene for 3D objects -->
-       	<a-scene stats embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-            <!-- Create method to recognises a barcode marker, symbolsing a 6 -->
-            <a-marker type='barcode' value='1'>
+		<div class="menu">
+			<button onClick="showMenuScr()" class="menubtn">Menu</button>
+			<div id="menu" class="menu-content">
+				<a href="#createNewObject">Store new Object details</a>
+				<a href="#changeObjectDetails">Change existing Object details</a>
+			</div>
+		</div>
+		<script>
+			function showMenuScr(){
+				document.getElementById("menu").classList.toggle("show");
+			}
+		</script>
+		
+		<a-scene stats embedded vr-mode-ui="enabled: false" arjs">
+			
+			<!-- Create method to recognises a barcode marker, symbolsing a 1 -->
+			<a-marker type='barcode' value='1'>
 			<!-- Create a plane next to the marker -->
-	            <a-plane 
-                         rotation="'90 0 0"
-                         position="1 0 0"
-                         color="grey">
-                </a-plane>
-            </a-marker>
+<!--				<a-plane rotation="-90 0 0" position="2 0 0" color="grey" width="2"></a-plane>-->
+				<a-entity geometry="primitive: plane; width: auto; height: auto"
+					material="color: blue"
+					id="OIP"
+					rotation="-90 0 0"
+				>
+				</a-entity>
+				<script>
+					var objInfo = "anchor: center; align: center; width:2; value: " + returnObjInfo();
+					var OIP = document.querySelector('#OIP');
+					OIP.setAttribute('text', objInfo);
+				</script>
+	        	</a-marker>
 		
-	    	<!-- Create method to recognise a barcode marker, symbolising a 7 -->
-	        <a-marker type='barcode' value='2'>
-			<!-- Create a red 3D box on the marker -->
-		    	<a-box position='0 0.5 0' color="red"></a-box>
-	        </a-marker>
-		
+		    	<!-- Create method to recognise a barcode marker, symbolising a 2 -->
+		        <a-marker type='barcode' value='2'>
+				<!-- Create a red 3D box on the marker -->
+		    		<a-box position='0 0.5 0' color="red"></a-box>
+		        </a-marker>
+	
 			<a-marker type='barcode' value='3'>
 				<a-box position=' 0 0.5 0' color="blue"></a-box>
 			</a-marker>
 				
-            <!--Create camera entity in 3D space to display AR scene -->
-	        <a-entity camera></a-entity>
+	            	<!--Create camera entity in 3D space to display AR scene -->
+		        <a-entity camera></a-entity>
+			<a-text value="Scan a Marker to start!" position="1 0 0"></a-text>
 
-        </a-scene>
-    </body>
+	        </a-scene>
+	</body>
 </html>

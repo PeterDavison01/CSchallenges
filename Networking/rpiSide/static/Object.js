@@ -1,41 +1,47 @@
-var name = "null";
-var markerNum = -1;
-var objCharacs = [];
-
 var totalObjs = [];
 
-//Default Constructor
-function ObjectConstructor() {
-	this.name = "Unknown";
-	this.markerNum = -1;
-	this.objCharacs = null;
-	totalObjs.add(this);
-};
+var object = {
+	name: "Unknown",
+	markerNum: -1,
+	objCharacs: [],
 
-//Constructor
-function ObjectConstructor(name, markerNum, objCharacs) {
-	this.name = name;
-	this.markerNum = markerNum;
-	for(int i=0; i<objCharacs.size(); i++) {
-		String objCharacStr = this.objCharacs.get(i);
-		objCharacStr = objCharacs.get(i);
+	get name(){
+		return this.name;
+	},
+
+	get markerNum(){
+		return markerNum;
+	},
+
+	get objCharacs(){
+		var i;
+		var rtn = "";
+		if (objCharacs.length = 0) {
+			rtn = "There are currently no object characteristics.";
+		}
+		else{
+			for (i = 0; i < objCharacs.length; i++){
+				rtn = "\n" + (i+1) + ". " + objCharacs[i] + "";
+			}
+		}
+		return rtn;
+	},
+
+	set name(newName){
+		this.name = newName;
+	},
+
+	set markerNum(newMarkerNum){
+		this.markerNum = newMarkerNum;
+	},
+
+	set objCharacs(newObjCharacs){
+		this.objCharacs = newObjCharacs;
 	}
-	totalObjs.add(this);
 };
 
-//Getters and Setters
-Object.prototype.getName = function () {
-  return name;
-};
-
-Object.prototype.setName = function (name) {
-  this.name = name;
-};
-
-Object.prototype.getMarkerNum = function(){
-  return markerNum;
-};
-
-Object.prototype.setMarkerNum = function () {
-  this.markerNum = markerNum;
-};
+function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
+	this.name = consName;
+	this.markerNum = consMarkerNum;
+	this.objCharacs = consObjCharacs;
+}
