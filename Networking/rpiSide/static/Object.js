@@ -10,7 +10,7 @@ var object = {
 	},
 
 	get markerNum(){
-		return markerNum;
+		return this.markerNum;
 	},
 
 	get objCharacs(){
