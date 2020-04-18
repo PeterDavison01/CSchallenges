@@ -21,6 +21,7 @@ function rtnObjCharacs(obj){
 
 function returnObjInfo(objID){
 	console.log("entered func");
+	console.log(numOfObjs);
 	var rtn = "Error loading Object.";
 	var i;
 	for (i = 0; i < numOfObjs; i++){
