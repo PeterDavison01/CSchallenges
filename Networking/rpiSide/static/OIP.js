@@ -20,8 +20,8 @@ function rtnObjCharacs(obj){
 }
 
 function returnObjInfo(objID){
+	var rtn = "Error loading Object.";
 	for (obj in allObjs){
-		var rtn = "Error loading Object.";
 		if (obj.markerNum == objID){
 			rtn = obj.name.toUpperCase() +
 			"\n" + "Marker Number: " + obj.markerNum +
