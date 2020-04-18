@@ -10,6 +10,11 @@ var allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 
 var i;
+for (i=0; i < 10; i++){
+	var storageName = "Object" + i;
+	sessionStorage.setItem(storageName, allObjs[i]);
+}
+
 var savedStorageName;
 for (i=0; i < 10; i++){
 	savedStorageName = "Object"+(i+1);
@@ -61,5 +66,5 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
 	var storageName = "Object" + this.markerNum;
-	sessionStorage.setItem(storageNum, this);
+	sessionStorage.setItem(storageName, this);
 }
