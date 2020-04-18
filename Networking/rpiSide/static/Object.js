@@ -1,4 +1,5 @@
-var allObjs = [{name: "", markerNum: 1, objCharacs: []}, 
+var allObjs;
+allObjs = [{name: "", markerNum: 1, objCharacs: []}, 
 	      {name: "", markerNum: 2, objCharacs: []},
 	      {name: "", markerNum: 3, objCharacs: []},
 	      {name: "", markerNum: 4, objCharacs: []},
