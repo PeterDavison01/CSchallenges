@@ -24,15 +24,15 @@ function returnObjInfo(objID){
 	console.log(numOfObjs);
 	var rtn = "Error loading Object.";
 	var i;
-	for (i = 0; i < numOfObjs; i++){
+	for (obj of allObjs){
 		//console.log(allObjs[i]);
 		console.log("waiting");
-		if (allObjs[i].markerNum == objID){
+		if (obj.markerNum == objID){
 			console.log("That's ok");
-			rtn = allObj[i].name.toUpperCase() +
-			"\n" + "Marker Number: " + allObj[i].markerNum +
+			rtn = obj.name.toUpperCase() +
+			"\n" + "Marker Number: " + obj.markerNum +
 			"\n" + "Object Characteristics: " +
-			rtnObjCharacs(allObj[i]);
+			rtnObjCharacs(obj);
 		}
 	}
 	return rtn;
