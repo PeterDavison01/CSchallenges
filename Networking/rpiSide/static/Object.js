@@ -14,7 +14,7 @@ localStorage.setItem("savedAllObjs", allObjs);
 var i;
 var loadedAllObjs = localStorage.getItem["savedAllObjs"];
 console.log(localStorage.getItem["savedAllObjs"]);
-loadedAllObjs = loadedAllObjs.parse();
+loadedAllObjs = JSON.parse(loadedAllObjs);
 console.log(loadedAllLogs);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
@@ -67,6 +67,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	savedAllObjsStr = allObjs.stringify();
+	savedAllObjsStr = JSON.stringify(allObjs);
 	localStorage.setItem("savedAllObjs", savedAllObjs);
 }
