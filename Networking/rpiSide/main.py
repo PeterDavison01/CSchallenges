@@ -4,9 +4,13 @@ import time
 
 app = Flask(__name__)
 
-@app.route("/") or @app.route("/main")
+@app.route("/")
 def main():
 	return render_template('index.html')
+
+@app.route("/")
+def backToMain:
+	@app.route("/")
 
 @app.route("/createNewObject")
 def createNewObjectForm():
