@@ -8,9 +8,9 @@ app = Flask(__name__)
 def main():
 	return render_template('index.html')
 
-@app.route("/")
+@app.route("/main")
 def backToMain():
-	@app.route("/")
+	return render_template('index.html')
 
 @app.route("/createNewObject")
 def createNewObjectForm():
