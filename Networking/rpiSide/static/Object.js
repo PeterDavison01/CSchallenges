@@ -14,6 +14,7 @@ localStorage.setItem("savedAllObjs", allObjs);
 var i;
 var loadedAllObjs = localStorage.getItem["savedAllObjs"];
 console.log(localStorage.getItem["savedAllObjs"]);
+console.log(loadedAllLogs);
 loadedAllObjs = JSON.parse(loadedAllObjs);
 console.log(loadedAllLogs);
 for (i=0; i < 10; i++){
