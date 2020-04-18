@@ -12,7 +12,7 @@ localStorage.setItem("savedAllObjs", allObjs);
 
 var i;
 var loadedAllObjs = localStorage.getItem["savedAllObjs"];
-console.log(loadedAllObjs);
+console.log(localStorage.getItem["savedAllObjs"]);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
 	if (loadedStorageObj != null){
