@@ -3,8 +3,14 @@ function debugCreateNewObject(name, markerNum, objCharacs){
 }
 
 function createNewObject() {
-	var name = document.getElementById("createName");
-	var markerNum = allObjs.length + 1;
-	console.log(markerNum);
-	var obj = new ObjectConstructor(name, markerNum, []);
+	var creatorName = document.getElementById("createName");
+	var creatorMarkerNum;
+	for (existingObj of allObjs){
+		if (existingObj.name.length == 0){
+			creatorMarkerNum = existingObj.markerNum;
+			break;
+		}
+	}
+	console.log(creatorMarkerNum);
+	var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
 }
