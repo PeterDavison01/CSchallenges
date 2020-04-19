@@ -17,5 +17,6 @@ function createNewObject() {
 		}
 		console.log(creatorMarkerNum);
 		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
+		closeCreateObjForm();
 	}
 }
