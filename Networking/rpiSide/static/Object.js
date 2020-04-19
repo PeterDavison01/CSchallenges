@@ -28,7 +28,7 @@ for (i=0; i < 10; i++){
 	}
 }
 
-var numOfObjs;
+var numOfObjs = 0;
 for (checkingNumOfObj of allObjs){
 	if (checkingNumOfObj.name == ""){
 		numOfObjs++;
