@@ -25,13 +25,18 @@ function changeObjectDetails() {
 		var startingIndex = 0;
 		var endingIndex = 0;
 		var objCharacsIndex = 0;
-		for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
-			if(chosenObjNewDetailsRaw[i] == "."){
-				endingIndex = i;
-				chosenObjNewDetails[objCharacsIndex] = chosenObjNewDetailsRaw.slice(startingIndex, endingIndex);
-				objCharacsIndex++;
-				endingIndex += 2;
-				startingIndex = endingIndex;
+		if (chosenObjNewDetailsRaw==""){
+			chosenObjNewDetails.concat(chosenObj.objCharacs);
+		}
+		else{
+			for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
+				if(chosenObjNewDetailsRaw[i] == "."){
+					endingIndex = i;
+					chosenObjNewDetails[objCharacsIndex] = chosenObjNewDetailsRaw.slice(startingIndex, endingIndex);
+					objCharacsIndex++;
+					endingIndex += 2;
+					startingIndex = endingIndex;
+				}
 			}
 		}
 		console.log(chosenObjNewDetails);
