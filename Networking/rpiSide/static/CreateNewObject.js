@@ -3,7 +3,7 @@ function debugCreateNewObject(name, markerNum, objCharacs){
 }
 
 function createNewObject() {
-	if (numOfObjs == 11){
+	if (numOfObjs == 10){
 		window.alert("You have reached the maximum number of objects! Consider deleting some using the menu.");
 	}
 	else{
