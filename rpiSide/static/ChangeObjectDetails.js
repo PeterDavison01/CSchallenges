@@ -10,7 +10,7 @@ function debugChangeObjectDetails(newName,  ObjID, newObjCharacs){
 
 function changeObjectDetails() {
 	var chosenObjID = document.getElementById("changingObjID").value;
-	if (1 < chosenObjID > 10){
+	if (1 < chosenObjID) or if (chosenObjID > 10){
 		window.alert("That's not a valid Object Marker Number!");
 	}
 	else{
@@ -36,7 +36,7 @@ function changeObjectDetails() {
 		}
 		console.log(chosenObjNewDetails);
 		console.log(objNewName);
-		var testObj = new ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
+		var testObj = new ObjectConstructor(objNewName, chosenObjID, chosenObjNewDetails);
 		console.log(testObj);
 	}
 }
