@@ -16,7 +16,6 @@ allObjs = [{name: "", markerNum: 1, objCharacs: []},
 var i;
 var loadedAllObjs = sessionStorage.getItem("savedAllObjs");
 loadedAllObjs = JSON.parse(loadedAllObjs);
-console.log(loadedAllObjs);
 for (i=0; i < 10; i++){
 	var loadedStorageObj = loadedAllObjs[i];
 	if (loadedStorageObj != null){
