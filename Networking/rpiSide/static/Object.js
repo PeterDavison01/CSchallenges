@@ -11,7 +11,7 @@ allObjs = [{name: "", markerNum: 1, objCharacs: []},
 	      {name: "", markerNum: 10, objCharacs: []}];
 //var savedAllObjsStr = JSON.stringify(allObjs);
 //console.log(savedAllObjsStr);
-sessionStorage.setItem("savedAllObjs", JSON.stringify(allObjs));
+//sessionStorage.setItem("savedAllObjs", JSON.stringify(allObjs));
 
 var i;
 var loadedAllObjs = sessionStorage.getItem("savedAllObjs");
@@ -68,6 +68,6 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
-	//savedAllObjsStr = JSON.stringify(allObjs);
-	//sessionStorage.setItem("savedAllObjs", savedAllObjs);
+	savedAllObjsStr = JSON.stringify(allObjs);
+	sessionStorage.setItem("savedAllObjs", savedAllObjs);
 }
