@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+        <head>
+                <title> Customisable Augmented Reality GUI - Create New Object</title>
+                <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/main.css" media="screen"/>
+        </head>
+	<!-- Import A-frame V1.0.4 -->
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<!-- Import AR.js -->
+	<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+	<script src="{{url_for('static', filename='Object.js')}}"></script>
+	<script src="{{url_for('static', filename='CreateNewObject.js')}}"></script>
+	<script src="{{url_for('static', filename='OIP.js')}}"></script>
+	
+        <body style='margin : 0px; overflow: hidden;'>
+		<form action="#" class="create-form-container">
+			<h1>Delete Object</h1>
+			<label><b>Enter Object's Marker Number you wish to delete:</b></label>
+			<input id="createName" type="text" placeholder="Enter Marker Number" required>
+			<button type="submit" class="btn" onclick="deleteObj()">Save</button>
+			<script>function deleteObj(){ createNewObject(); closeForm() }</script>
+			<button type="reset" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</body>
+</html>
