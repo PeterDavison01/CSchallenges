@@ -68,6 +68,8 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
 	allObjs[(consMarkerNum-1)] = this;
+	console.log(this);
+	console.log(allObjs);
 	savedAllObjsStr = JSON.stringify(allObjs);
 	sessionStorage.setItem("savedAllObjs", savedAllObjs);
 }
