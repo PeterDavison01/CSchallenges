@@ -16,5 +16,9 @@ def createNewObjectForm():
 def changeObjDetails():
 	return render_template('changeObjectDetails.html')
 
+@app.route("/deleteObject")
+def deleteObject():
+	return render_template('deleteObject.html')
+
 if __name__ == '__main__':
 	app.run(ssl_context='adhoc',debug=True,port=8082,host='192.168.16.111')
