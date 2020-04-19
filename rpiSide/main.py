@@ -12,5 +12,9 @@ def main():
 def createNewObjectForm():
 	return render_template('createNewObject.html')
 
+@app.route("/changeObjectDetails")
+def changeObjDetails():
+	return render_template('changeObjectDetails.html')
+
 if __name__ == '__main__':
 	app.run(ssl_context='adhoc',debug=True,port=8082,host='192.168.16.111')
