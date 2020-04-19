@@ -16,6 +16,7 @@ function changeObjectDetails() {
 	else{
 		var chosenObj = searchForObj(chosenObjID);
 		var objNewName = document.getElementById("changingName").value;
+		console.log(objNewName);
 		if (objNewName=""){
 			objNewName = chosenObj.name;
 		}
