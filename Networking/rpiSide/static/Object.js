@@ -23,6 +23,13 @@ for (i=0; i < 10; i++){
 	}
 }
 
+var numOfObjs;
+for (checkingNumOfObj of allObjs){
+	if (checkingNumOfObj.name == ""){
+		numOfObjs++;
+	}
+}
+
 var object = {
 	name: "Unknown",
 	markerNum: -1,
