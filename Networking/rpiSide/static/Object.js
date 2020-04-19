@@ -15,7 +15,8 @@ sessionStorage.setItem("savedAllObjs", JSON.stringify(allObjs));
 
 var i;
 var loadedAllObjs = sessionStorage.getItem["savedAllObjs"];
-console.log(sessionStorage.getItem["savedAllObjs"]);
+console.log(sessionStorage.key(0
+console.log(sessionStorage.getItem("savedAllObjs"));
 console.log(loadedAllObjs);
 loadedAllObjs = JSON.parse(loadedAllObjs);
 console.log(loadedAllObjs);
