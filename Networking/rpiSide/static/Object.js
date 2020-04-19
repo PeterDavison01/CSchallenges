@@ -17,9 +17,13 @@ var i;
 var loadedAllObjs = sessionStorage.getItem("savedAllObjs");
 loadedAllObjs = JSON.parse(loadedAllObjs);
 for (i=0; i < 10; i++){
-	var loadedStorageObj = loadedAllObjs[i];
-	if (loadedStorageObj != null){
-		allObjs[i] = loadedStorageObj;
+	try{
+		var loadedStorageObj = loadedAllObjs[i];
+		if (loadedStorageObj != null){
+			allObjs[i] = loadedStorageObj;
+		}
+	}catch(err){
+		document.alert("Create an object!");
 	}
 }
 
