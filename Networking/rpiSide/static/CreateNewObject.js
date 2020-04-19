@@ -3,7 +3,7 @@ function debugCreateNewObject(name, markerNum, objCharacs){
 }
 
 function createNewObject() {
-	console.log(document.getElementById("createName"));
+	console.log(document.getElementById("createName").value);
 	var creatorName = document.getElementById("createName");
 	var creatorMarkerNum;
 	for (existingObj of allObjs){
