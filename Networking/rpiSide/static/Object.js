@@ -70,5 +70,5 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	console.log(this);
 	console.log(allObjs);
 	savedAllObjsStr = JSON.stringify(allObjs);
-	sessionStorage.setItem("savedAllObjs", savedAllObjs);
+	sessionStorage.setItem("savedAllObjs", savedAllObjsStr);
 }
