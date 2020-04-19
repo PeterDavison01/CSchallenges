@@ -36,10 +36,18 @@ function showMenu(){
 	document.getElementById("menu").classList.toggle("show");
 }
 
+function closeForm() {
+	window.location.href = "/";
+}
+
 function openCreateObjForm() {
  	window.location.href = "createNewObject";
 }
 
-function closeCreateObjForm() {
-	window.location.href = "/";
+function openChangeObjForm(){
+	window.location.href = "changeObjForm";
+}
+
+function openDeleteObjForm(){
+	window.location.href = "deleteObjForm";
 }
