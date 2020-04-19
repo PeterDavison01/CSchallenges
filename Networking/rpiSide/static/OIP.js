@@ -27,6 +27,7 @@ function returnObjInfo(objID){
 			"\n" + "Marker Number: " + obj.markerNum +
 			"\n" + "Object Characteristics: " +
 			rtnObjCharacs(obj);
+			break;
 		}
 	}
 	return rtn;
