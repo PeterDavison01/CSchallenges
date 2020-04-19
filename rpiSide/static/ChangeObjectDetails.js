@@ -3,7 +3,9 @@ function debugChangeObjectDetails(newName,  ObjID, newObjCharacs){
 	foundObj.name = newName;
 	var i;
 	for(i = 0; i < foundObj.objCharacs.length; i++){
-		foundObj.objCharacs[i] = newObjCharacs[i]
+		foundObj.objCharacs[i] = newObjCharacs[i];
+	}
+	
 }
 
 function changeObjectDetails() {
