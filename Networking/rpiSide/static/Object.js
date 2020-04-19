@@ -23,7 +23,7 @@ for (i=0; i < 10; i++){
 			allObjs[i] = loadedStorageObj;
 		}
 	}catch(err){
-		document.alert("Create an object!");
+		window.alert("Create an object!");
 	}
 }
 
