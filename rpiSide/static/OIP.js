@@ -18,7 +18,7 @@ function rtnObjCharacs(obj){
 	return rtn;
 }
 
-function searchForObj(
+function searchForObj(){
 	for (obj of allObjs){
 		if (obj.markerNum == objID){
 			return obj;
