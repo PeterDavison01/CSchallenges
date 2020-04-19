@@ -31,6 +31,7 @@ function changeObjectDetails() {
 		}
 		console.log(chosenObjNewDetails);
 		var name = chosenObj.name;
-		ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
+		var testObj = ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
+		console.log(testObj);
 	}
 }
