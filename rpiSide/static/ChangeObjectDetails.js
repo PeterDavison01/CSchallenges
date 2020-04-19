@@ -9,6 +9,27 @@ function debugChangeObjectDetails(newName,  ObjID, newObjCharacs){
 }
 
 function changeObjectDetails() {
-	object.setName(newName);
-	object.objCharacs.push(newObjCharac);
+	var chosenObjID = document.getElementById("changingObjID").value;
+	if (0 < chosenObjID < 10){
+		window.alert("That's not a valid Object Marker Number!");
+	}
+	else{
+		var chosenObj = searchForObj(chosenObjID);
+		var chosenObjNewDetailsRaw = document.getElementById("changingDetails").value;
+		var chosenObjNewDetails = [];
+		var startingIndex = 0;
+		var endingIndex = 0;
+		var objCharacsIndex = 0;
+		for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
+			if(chosenObjNewDetailsRaw[i] == "."){
+				endingIndex = i;
+				chosenObjNewDetails[objCharacsIndex] = str.slice(startingIndex, endingIndex);
+				objCharacsIndex++;
+				endingIndex += 2;
+				startingIndex = endingIndex;
+			}
+		}
+		var name = chosenObj.name;
+		ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
+	}
 }
