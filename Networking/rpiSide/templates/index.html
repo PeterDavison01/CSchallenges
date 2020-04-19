@@ -41,7 +41,6 @@
 				<script>
 					var template = "anchor: center; align: center; width:2; value: ";
 					var objInfo = "";
-					console.log(allObjs.length);
 					if (numOfObjs = 0){
 						objInfo = template + "There are no objects available.";
 					}
@@ -64,14 +63,15 @@
 				<script>
 					var template = "anchor: center; align: center; width:2; value: ";
 					var objInfo = "";
-					if (numOfObjs < 2){
-						objInfo = template + "No Object assigned to this marker.";
+					if (numOfObjs = 0){
+						objInfo = template + "There are no objects available.";
 					}
 					else{
 						objInfo = template + returnObjInfo(2);
 					}
-					var OIP = document.querySelector('#OIP2');
+					var OIP = document.querySelector('#OIP1');
 					OIP.setAttribute('text', objInfo);
+				</script>
 				</script>
 			</a-marker>
 			
