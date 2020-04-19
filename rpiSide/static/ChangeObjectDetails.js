@@ -29,6 +29,7 @@ function changeObjectDetails() {
 				startingIndex = endingIndex;
 			}
 		}
+		console.log(chosenObjNewDetails);
 		var name = chosenObj.name;
 		ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
 	}
