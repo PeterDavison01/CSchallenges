@@ -17,7 +17,7 @@ function changeObjectDetails() {
 		var chosenObj = searchForObj(chosenObjID);
 		var objNewName = document.getElementById("changingName").value;
 		console.log(objNewName);
-		if (objNewName=""){
+		if (objNewName==""){
 			objNewName = chosenObj.name;
 		}
 		var chosenObjNewDetailsRaw = document.getElementById("changingDetails").value;
