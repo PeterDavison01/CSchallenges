@@ -23,7 +23,7 @@ function changeObjectDetails() {
 		for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
 			if(chosenObjNewDetailsRaw[i] == "."){
 				endingIndex = i;
-				chosenObjNewDetails[objCharacsIndex] = str.slice(startingIndex, endingIndex);
+				chosenObjNewDetails[objCharacsIndex] = chosenObjNewDetailsRaw.slice(startingIndex, endingIndex);
 				objCharacsIndex++;
 				endingIndex += 2;
 				startingIndex = endingIndex;
