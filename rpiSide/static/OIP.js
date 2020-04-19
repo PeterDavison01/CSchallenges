@@ -18,17 +18,22 @@ function rtnObjCharacs(obj){
 	return rtn;
 }
 
-function returnObjInfo(objID){
-	var rtn = "Error loading Object.";
+function searchForObj(
 	for (obj of allObjs){
 		if (obj.markerNum == objID){
-			rtn = obj.name.toUpperCase() +
-			"\n" + "Marker Number: " + obj.markerNum +
-			"\n" + "Object Characteristics: " +
-			rtnObjCharacs(obj);
+			return obj;
 			break;
 		}
 	}
+}
+
+function returnObjInfo(objID){
+	var rtn = "Error loading Object.";
+	var obj = searchForObj(objID);
+	rtn = obj.name.toUpperCase() +
+	"\n" + "Marker Number: " + obj.markerNum +
+	"\n" + "Object Characteristics: " +
+	rtnObjCharacs(obj);
 	return rtn;
 }
 
