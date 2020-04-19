@@ -24,6 +24,7 @@ for (i=0; i < 10; i++){
 		}
 	}catch(err){
 		window.alert("Create an object!");
+		break;
 	}
 }
 
