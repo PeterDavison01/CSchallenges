@@ -15,6 +15,10 @@ function changeObjectDetails() {
 	}
 	else{
 		var chosenObj = searchForObj(chosenObjID);
+		var objNewName = document.getElementById("changingName").value;
+		if (objNewName=""){
+			objNewName = chosenObj.name;
+		}
 		var chosenObjNewDetailsRaw = document.getElementById("changingDetails").value;
 		var chosenObjNewDetails = [];
 		var startingIndex = 0;
@@ -30,7 +34,6 @@ function changeObjectDetails() {
 			}
 		}
 		console.log(chosenObjNewDetails);
-		var objNewName = chosenObj.name;
 		console.log(objNewName);
 		var testObj = new ObjectConstructor(name, chosenObjID, chosenObjNewDetails);
 		console.log(testObj);
