@@ -50,9 +50,9 @@ function openCreateObjForm() {
 }
 
 function openChangeObjForm(){
-	window.location.href = "changeObjForm";
+	window.location.href = "changeObjDetails";
 }
 
 function openDeleteObjForm(){
-	window.location.href = "deleteObjForm";
+	window.location.href = "deleteObj";
 }
