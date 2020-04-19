@@ -75,6 +75,9 @@ var object = {
 };
 
 function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
+	console.log(consName);
+	console.log(consMarkerNum);
+	console.log(consObjCharacs);
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
