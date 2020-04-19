@@ -16,10 +16,10 @@
         <body style='margin : 0px; overflow: hidden;'>
 		<form action="#" class="create-form-container">
 			<h1>Store new Object details</h1>
-			<label for="id"><b>Name</b></label>
+			<label for="id"><b>Object ID</b></label>
 			<input id="changingObjID" type="text" placeholder="Enter Object's Marker Number you wish to change the details of" name="id"required>
 			<label for="details"><b>New Details</b></label>
-			<input id="changingDetails" type="text" placeholder="Enter Object's new details, with each characteristic separated by a fullstop">
+			<input id="changingDetails" type="text" placeholder="Enter Object's new details, with each characteristic separated by a fullstop" size="80">
 			<button type="submit" class="btn" onclick="saveObj()">Save</button>
 			<script>function saveObj(){ changeObjectDetails(); closeForm() }</script>
 			<button type="reset" class="btn cancel" onclick="closeForm()">Close</button>
