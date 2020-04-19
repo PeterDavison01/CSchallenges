@@ -3,14 +3,19 @@ function debugCreateNewObject(name, markerNum, objCharacs){
 }
 
 function createNewObject() {
-	var creatorName = document.getElementById("createName").value;
-	var creatorMarkerNum;
-	for (existingObj of allObjs){
-		if (existingObj.name == ""){
-			creatorMarkerNum = existingObj.markerNum;
-			break;
-		}
+	if (numOfObjs == 11){
+		window.alert("You have reached the maximum number of objects! Consider deleting some using the menu.");
 	}
-	console.log(creatorMarkerNum);
-	var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
+	else{
+		var creatorName = document.getElementById("createName").value;
+		var creatorMarkerNum;
+		for (existingObj of allObjs){
+			if (existingObj.name == ""){
+				creatorMarkerNum = existingObj.markerNum;
+				break;
+			}
+		}
+		console.log(creatorMarkerNum);
+		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
+	}
 }
