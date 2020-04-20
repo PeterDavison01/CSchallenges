@@ -5,33 +5,40 @@
 		<!-- Create a viewport to allow the user to see the content, make it the width of their device and unscalable
 		so the display doesn't distort -->
         	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!--Import the css found in the static folder -->
 		<link rel="stylesheet" type="text/css" href="static/main.css" media="screen"/>
 	</head>
+	
 	<!-- Import A-frame V1.0.4 -->
 	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	
 	<!-- Import AR.js -->
 	<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+	
+	<!-- Import all JavaScript files from the static folder -->
 	<script src="{{url_for('static', filename='Object.js')}}"></script>
 	<script src="{{url_for('static', filename='CreateNewObject.js')}}"></script>
 	<script src="{{url_for('static', filename='OIP.js')}}"></script>
 		
 	<body>
 		<canvas style="touch-action: none' user-select: none; -webkit-user-drag: none;"></canvas>
-	    <!-- Create AR scene for 3D objects -->
+	 	<!-- Create the division for where the menu button is -->
 		<div class="dropdown">
 			<button onClick="showMenu()" class="menubtn">Menu</button>
 			<div id="menu" class="dropdown-content">
+				<!-- Create the buttons and give them functionality -->
 				<button class="createObjBtn" onclick="openCreateObjForm()">Store new Object details</button>
 				<button class="changeObjBtn" onclick="openChangeObjForm()">Change existing Object details</button>
 				<button class="deleteObjBtn" onclick="openDeleteObjForm()">Delete an existing Object</button>
 			</div>
 		</div>
 		
-		<a-scene embedded vr-mode-ui="enabled: true" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+		<!-- Create AR scene for objects -->
+		<a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 		
 			<!-- Create method to recognises a barcode marker, symbolsing a 1 -->
 			<a-marker type='barcode' value='1'>
-			<!-- Create a plane next to the marker -->
+				<!-- Create a plane for the marker -->
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
 					id="OIP1" 
@@ -40,19 +47,27 @@
 				>
 				</a-entity>
 				<script>
+					//Prepare the variable to be fed into the value parameter of 
+					//the geometry entity above
 					var template = "anchor: center; align: center; width:2; value: ";
 					var objInfo = "";
+					//Check if there is an object assigned to this marker
+					//If not, print message
 					if (allObjs[0].assignment == false){
 						objInfo = template + "No Objects assigned to this marker.";
 					}
+					//If so then get the details of it
 					else{
 						objInfo = template + returnObjInfo(1);
 					}
+					//Initialise the Object Information Panel (OIP) and select the plane
 					var OIP = document.querySelector('#OIP1');
+					//Display Object information
 					OIP.setAttribute('text', objInfo);
 				</script>
 	        	</a-marker>
-	
+			
+			<!-- Create method to recognises a barcode marker, symbolsing a 2 -->
 			<a-marker type='barcode' value='2'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -76,6 +91,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 3 -->
 			<a-marker type='barcode' value='3'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -98,6 +114,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 4 -->
 			<a-marker type='barcode' value='4'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -120,6 +137,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 5 -->
 			<a-marker type='barcode' value='5'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -142,6 +160,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 6 -->
 			<a-marker type='barcode' value='6'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -164,6 +183,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 7 -->
 			<a-marker type='barcode' value='7'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -186,6 +206,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 8 -->
 			<a-marker type='barcode' value='8'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -208,6 +229,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 9 -->
 			<a-marker type='barcode' value='9'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
@@ -230,6 +252,7 @@
 				</script>
 			</a-marker>
 			
+			<!-- Create method to recognises a barcode marker, symbolsing a 10 -->
 			<a-marker type='barcode' value='10'>
 				<a-entity geometry="primitive: plane; width: auto; height: auto"
 					material="color: grey; opacity: 0.75" 
