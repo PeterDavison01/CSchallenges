@@ -10,7 +10,7 @@ This project will utilise the tools provided by [AR.js](https://github.com/jerom
 
 This section is for developers who want to use this repository for their own development.
 
-### Web Application
+#### Web Application
 The AR standalone version can be found [here](https://peterdavison01.github.io/CSchallenges/). This demonstrates a simple AR marker-based app that produces different coloured squares. This application is mainly used for testing which explains it's limited capabilities. 
 
 #### The sourceCode folder
