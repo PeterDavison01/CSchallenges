@@ -50,15 +50,15 @@
   z-index: 9;
 }
 
-/* Add styles to the form container 
+/* Add styles to the form container */
 .create-form-container {
-  max-width: 300px;
+  max-width: 500px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width input fields 
-.create-form-container input[type=text], .create-form-container input[type=password] {
+/* Full-width input fields */
+.create-form-container {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -70,9 +70,9 @@
 .create-form-container input[type=text]:focus, .create-form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-}
+}*/
 
-/* Set a style for the submit/login button 
+/* Set a style for the save button */
 .create-form-container .btn {
   background-color: #4CAF50;
   color: white;
@@ -84,13 +84,13 @@
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button 
+/* Add a red background color to the cancel button */
 .create-form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons 
+/* Add some hover effects to buttons */
 .create-form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-*/
+
