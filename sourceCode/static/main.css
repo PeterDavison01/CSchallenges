@@ -1,3 +1,4 @@
+/* Menu button on the AR page */
 .menubtn {
   background-color: #3498DB;
   color: white;
@@ -7,10 +8,12 @@
   cursor: pointer;
 }
 
+/* Creating an animation when the button is hovered over */
 .menubtn:hover, .menubtn:focus {
   background-color: #2980B9;
 }
 
+/* Setting where the drop down menu will be */
 .dropdown {
   position: fixed;
   display: inline-block;
@@ -19,6 +22,7 @@
   z-index: 1;
 }
 
+/* Setting how to dropdown content will be styled */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -29,6 +33,7 @@
   z-index: 1;
 }
 
+/* Setting the syle when the dropdown is activated*/
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -36,18 +41,11 @@
   display: block;
 }
 
+/* Creating an animation when the button is hovered over */
 .dropdown a:hover {background-color: #ddd;}
 
+/* Shows whatever object it's linked to */
 .show {display: block;}
-
-.create-form-popup{
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
 
 /* Add styles to the form container */
 .create-form-container {
