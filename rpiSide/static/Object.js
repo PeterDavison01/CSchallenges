@@ -64,7 +64,7 @@ var object = {
 	
 	get assignment(){
 		return assignment;
-	}
+	},
 
 	set name(newName){
 		this.name = newName;
