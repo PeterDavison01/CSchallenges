@@ -10,11 +10,11 @@ function createNewObject() {
 		var creatorName = document.getElementById("createName").value;
 		var creatorMarkerNum;
 		for (existingObj of allObjs){
-			if (existingObj.name == ""){
+			if (existingObj.assignment == false){
 				creatorMarkerNum = existingObj.markerNum;
 				break;
 			}
 		}
-		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
+		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, [], true);
 	}
 }
