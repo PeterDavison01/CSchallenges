@@ -1,9 +1,15 @@
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<!-- Import Aframe -->
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<!-- Import AR.js -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+
 <body style='margin : 0px; overflow: hidden;'>
+	<!-- Create an AR scene and set up the parameters to allow the app to use markers -->
 	<a-scene embedded vr-mode-ui="enabled: false" arjs=arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+		<!-- To recognise a marker representing a value of 1 --> 
 		<a-marker type="barcode" value="1">
+			<!-- Produce a 3D box when the marker is recognise above the marker -->
 			<a-box position='0 0.5 0' material='opacity: 0.5; color="red"'></a-box>
 		</a-marker>
 		<a-marker type="barcode" value="2">
