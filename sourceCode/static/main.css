@@ -58,7 +58,7 @@
 }
 
 /* Full-width input fields */
-.create-form-container {
+.create-form-container input[type=text]:focus{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
