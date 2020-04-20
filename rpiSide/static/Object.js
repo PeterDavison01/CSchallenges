@@ -1,14 +1,14 @@
 var allObjs;
-allObjs = [{name: "", markerNum: 1, objCharacs: []}, 
-	      {name: "", markerNum: 2, objCharacs: []},
-	      {name: "", markerNum: 3, objCharacs: []},
-	      {name: "", markerNum: 4, objCharacs: []},
-	      {name: "", markerNum: 5, objCharacs: []},
-	      {name: "", markerNum: 6, objCharacs: []},
-	      {name: "", markerNum: 7, objCharacs: []},
-	      {name: "", markerNum: 8, objCharacs: []},
-	      {name: "", markerNum: 9, objCharacs: []},
-	      {name: "", markerNum: 10, objCharacs: []}];
+allObjs = [{name: "", markerNum: 1, objCharacs: [], assignment: false}, 
+	      {name: "", markerNum: 2, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 3, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 4, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 5, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 6, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 7, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 8, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 9, objCharacs: [], assignment: false},
+	      {name: "", markerNum: 10, objCharacs: [], assignment: false}];
 //var savedAllObjsStr = JSON.stringify(allObjs);
 //console.log(savedAllObjsStr);
 //sessionStorage.setItem("savedAllObjs", JSON.stringify(allObjs));
