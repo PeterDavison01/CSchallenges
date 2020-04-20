@@ -3,6 +3,9 @@ function changeObjectDetails() {
 	if (1 > chosenObjID || chosenObjID > 10){
 		window.alert("That's not a valid Object Marker Number!");
 	}
+	else if (allObjs[(chosenObjID-1)].assignment == false){
+		window.alert("You must assign values to that marker first!");
+	}
 	else{
 		var chosenObj = searchForObj(chosenObjID);
 		if (chosenObj.name == ""){
@@ -10,7 +13,6 @@ function changeObjectDetails() {
 		}
 		else{
 			var objNewName = document.getElementById("changingName").value;
-			console.log(objNewName);
 			if (objNewName==""){
 				objNewName = chosenObj.name;
 			}
