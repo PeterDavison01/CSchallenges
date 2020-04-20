@@ -4,7 +4,6 @@ function deleteObject(){
 		window.alert("That's not a valid Object Marker Number!");
 	}
 	else{
-                var newObj = new ObjectConstructor("", chosenObjID, []);
-		allObjs[chosenObjID].assignment = false;
+                var newObj = new ObjectConstructor("", chosenObjID, [], true);
         }
 }
