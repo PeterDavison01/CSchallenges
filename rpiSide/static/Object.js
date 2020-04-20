@@ -90,7 +90,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs, consAssignme
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
-	this.unassigned = consAssignment;
+	this.assignment = consAssignment;
 	allObjs[(consMarkerNum-1)] = this;
 	console.log(this);
 	console.log(allObjs);
