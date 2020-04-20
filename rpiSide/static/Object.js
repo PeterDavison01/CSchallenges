@@ -83,14 +83,14 @@ var object = {
 	}
 };
 
-function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
+function ObjectConstructor(consName, consMarkerNum, consObjCharacs, consAssignment){
 	console.log(consName);
 	console.log(consMarkerNum);
 	console.log(consObjCharacs);
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
-	this.unassigned = true;
+	this.unassigned = consAssignment;
 	allObjs[(consMarkerNum-1)] = this;
 	console.log(this);
 	console.log(allObjs);
