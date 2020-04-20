@@ -8,37 +8,32 @@ function changeObjectDetails() {
 	}
 	else{
 		var chosenObj = searchForObj(chosenObjID);
-		if (chosenObj.name == ""){
-	    		window.alert("You must make an object for that marker first!");
+		var objNewName = document.getElementById("changingName").value;
+		if (objNewName==""){
+			objNewName = chosenObj.name;
+		}
+		var chosenObjNewDetailsRaw = document.getElementById("changingDetails").value;
+		var chosenObjNewDetails = [];
+		var startingIndex = 0;
+		var endingIndex = 0;
+		var objCharacsIndex = 0;
+		if (chosenObjNewDetailsRaw==""){
+			chosenObjNewDetails.concat(chosenObj.objCharacs);
 		}
 		else{
-			var objNewName = document.getElementById("changingName").value;
-			if (objNewName==""){
-				objNewName = chosenObj.name;
-			}
-			var chosenObjNewDetailsRaw = document.getElementById("changingDetails").value;
-			var chosenObjNewDetails = [];
-			var startingIndex = 0;
-			var endingIndex = 0;
-			var objCharacsIndex = 0;
-			if (chosenObjNewDetailsRaw==""){
-				chosenObjNewDetails.concat(chosenObj.objCharacs);
-			}
-			else{
-				for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
-					if(chosenObjNewDetailsRaw[i] == "."){
-						endingIndex = i;
-						chosenObjNewDetails[objCharacsIndex] = chosenObjNewDetailsRaw.slice(startingIndex, endingIndex);
-						objCharacsIndex++;
-						endingIndex += 2;
-						startingIndex = endingIndex;
-					}
+			for(i = 0; i < chosenObjNewDetailsRaw.length; i++){
+				if(chosenObjNewDetailsRaw[i] == "."){
+					endingIndex = i;
+					chosenObjNewDetails[objCharacsIndex] = chosenObjNewDetailsRaw.slice(startingIndex, endingIndex);
+					objCharacsIndex++;
+					endingIndex += 2;
+					startingIndex = endingIndex;
 				}
 			}
-			console.log(chosenObjNewDetails);
-			console.log(objNewName);
-			var testObj = new ObjectConstructor(objNewName, chosenObjID, chosenObjNewDetails);
-			console.log(testObj);
 		}
+		console.log(chosenObjNewDetails);
+		console.log(objNewName);
+		var testObj = new ObjectConstructor(objNewName, chosenObjID, chosenObjNewDetails);
+		console.log(testObj);
 	}
 }
