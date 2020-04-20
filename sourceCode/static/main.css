@@ -57,7 +57,7 @@
 }
 
 /* Full-width input fields */
-.create-form-container input[type=text]:focus{
+.create-form-container input[type=text] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -66,7 +66,7 @@
 }
 
 /* When the inputs get focus, do something */
-.create-form-container input[type=text]:focus {
+.create-form-container input[type=text] {
   background-color: #ddd;
   outline: none;
 }
