@@ -15,6 +15,6 @@ function createNewObject() {
 				break;
 			}
 		}
-		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, [], true);
+		var obj = new ObjectConstructor(creatorName, creatorMarkerNum, []);
 	}
 }
