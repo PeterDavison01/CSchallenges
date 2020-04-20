@@ -1,8 +1,3 @@
-var testObjCharacs = ["15 pens", "Pads of paper", "A ruler", "Water Bottle", "Test1", "test2", "Test3"];
-var testName = "Cupboard";
-var testMarkerNum = 1;
-//debugCreateNewObject(testName, testMarkerNum, testObjCharacs);
-
 function rtnObjCharacs(obj){
 	var rtn = "\n\n";
 	if (obj.objCharacs.length == 0){
