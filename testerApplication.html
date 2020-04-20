@@ -3,13 +3,13 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded vr-mode-ui="enabled: false" arjs=arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-		<a-marker preset="barcode" value="1">
+		<a-marker type="barcode" value="1">
 			<a-box position='0 0.5 0' material='opacity: 0.5; color="red"'></a-box>
 		</a-marker>
-		<a-marker preset="barcode" value="2">
+		<a-marker type="barcode" value="2">
 			<a-box position='0 0.5 0' material='opacity: 0.5;' color="green"></a-box>
 		</a-marker>
-		<a-marker preset="barcode" value="3">
+		<a-marker type="barcode" value="3">
 			<a-box position='0 0.5 0' material='opacity: 0.5;' color="blue"></a-box>
 		</a-marker>
 	</a-scene>
