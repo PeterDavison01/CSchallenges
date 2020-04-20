@@ -5,7 +5,7 @@ function changeObjectDetails() {
 	}
 	else{
 		var chosenObj = searchForObj(chosenObjID);
-		if (chosenObj.name == "){
+		if (chosenObj.name == ""){
 	    		window.alert("You must make an object for that marker first!");
 		}
 		else{
