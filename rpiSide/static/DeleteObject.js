@@ -5,5 +5,6 @@ function deleteObject(){
 	}
 	else{
                 var newObj = new ObjectConstructor("", chosenObjID, []);
+		allObjs[chosenObjID].assignment = false;
         }
 }
