@@ -13,6 +13,9 @@ This section is for developers who want to use this repository for their own dev
 #### Web Application
 The AR standalone version can be found [here](https://peterdavison01.github.io/CSchallenges/). This demonstrates a simple AR marker-based app that produces different coloured squares. This application is mainly used for testing which explains it's limited capabilities. 
 
+#### Documents for Final Hand-in
+For the end of the module hand-in at 20/04/202 11:59pm.
+
 #### The sourceCode folder
 This folder contains all the source code for the whole AR application. Each source code file, whether it be HTML, Python or JavaScript, will contain comments to guide developers. Below are the contents of the folders:
 ##### main.py
