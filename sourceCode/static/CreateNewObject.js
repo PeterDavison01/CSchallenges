@@ -1,7 +1,4 @@
-function debugCreateNewObject(name, markerNum, objCharacs){
-	var testObj = new ObjectConstructor(name, markerNum, objCharacs);	
-}
-
+//Creates a new object using the input from the CreateNewObject form.
 function createNewObject() {
 	if (numOfObjs == 10){
 		window.alert("You have reached the maximum number of objects! Consider deleting some using the menu.");
