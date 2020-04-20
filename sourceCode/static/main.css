@@ -43,16 +43,15 @@
 .create-form-popup{
   display: none;
   position: fixed;
-  top: 0;
-  left: 50%;
-  width: 50%;
+  bottom: 0;
+  right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
 
 /* Add styles to the form container */
 .create-form-container {
-  max-width: 800px;
+  max-width: 300px;
   padding: 10px;
   background-color: white;
 }
