@@ -52,7 +52,7 @@
 
 /* Add styles to the form container */
 .create-form-container {
-  max-width: 500px;
+  max-width: 300px;
   padding: 10px;
   background-color: white;
 }
