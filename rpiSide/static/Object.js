@@ -39,6 +39,7 @@ var object = {
 	name: "Unknown",
 	markerNum: -1,
 	objCharacs: [],
+	assignment: false,
 
 	get name(){
 		return this.name;
@@ -60,6 +61,10 @@ var object = {
 		}
 		return rtn;
 	},
+	
+	get assignment(){
+		return assignment;
+	}
 
 	set name(newName){
 		this.name = newName;
@@ -71,6 +76,10 @@ var object = {
 
 	set objCharacs(newObjCharacs){
 		this.objCharacs = newObjCharacs;
+	},
+	
+	set unassigned(newAssignment){
+		this.unassigned = newAssignment;
 	}
 };
 
@@ -81,6 +90,7 @@ function ObjectConstructor(consName, consMarkerNum, consObjCharacs){
 	this.name = consName;
 	this.markerNum = consMarkerNum;
 	this.objCharacs = consObjCharacs;
+	this.unassigned = true;
 	allObjs[(consMarkerNum-1)] = this;
 	console.log(this);
 	console.log(allObjs);
